@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Google Contacts</title>
+</head>
+<body>
+    <h1>Contacts</h1>
+    <form action="#" th:action="@{/contacts}" method="post">
+        Name: <input type="text" name="name">
+        Email: <input type="text" name="email">
+        Phone: <input type="text" name="phoneNumber">
+        <button type="submit">Add Contact</button>
+    </form>
+    
+    <ul>
+        <li th:each="contact : ${contacts}">
+            <span th:text="${contact.name}"></span> -
+            <span th:text="${contact.email}"></span> -
+            <span th:text="${contact.phoneNumber}"></span>
+            <a th:href="@{'/delete/' + ${contact.id}}">Delete</a>
+        </li>
+    </ul>
+</body>
+</html>
