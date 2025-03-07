@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Google Contacts Hub</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fef9e7; /* Changed to solid background color */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+        .landing-wrapper {
+            background: rgba(255, 255, 255, 0.1);
+            background-color: white;
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        .landing-title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #196f3d;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .landing-text {
+            font-size: 16px;
+            margin-bottom: 30px;
+            color: #808b96;
+            line-height: 1.5;
+        }
+        .google-signin-btn {
+            display: inline-block;
+            background: #4285f4;
+            color: #fff;
+            padding: 12px 30px;
+            font-size: 18px;
+            font-weight: 400;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: background 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .google-signin-btn:hover {
+            background: #3267d6;
+            transform: translateY(-2px);
+        }
+        .google-signin-btn:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="landing-wrapper">
+        <h1 class="landing-title">Google Contacts Hub</h1>
+        <p class="landing-text">Seamlessly manage your contacts with Google integration. Sign in to get started!</p>
+        <a href="/oauth2/authorization/google?redirect_uri=/contacts" class="google-signin-btn">Sign In with Google</a>
+    </div>
+</body>
+</html>
